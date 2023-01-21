@@ -167,6 +167,17 @@ public class Calculator implements ActionListener {
 			
 			textfield.setText(String.valueOf(result));
 		}
+		if (e.getSource() == clrButton) {
+			textfield.setText("");
+		}
+		if (e.getSource() == delButton) {
+			String string = textfield.getText();
+			textfield.setText("");
+			
+			for(int i = 0; i < string.length() - 1; i++) {
+				textfield.setText(textfield.getText() + string.charAt(i));
+			}
+		}
 	}
 	
 
